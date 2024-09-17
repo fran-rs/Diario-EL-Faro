@@ -9,30 +9,34 @@ body {
 /* Título e imagen */
 header {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 16px; 
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   padding: 16px;
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
 }
 
 /* Estilos para la imagen del logo */
 .logo {
-  height: 50px; 
-  width: auto; 
+  height: 50px;
+  width: auto;
 }
 
 /* Estilos para el texto del encabezado */
 header h1 {
-  margin: 0; 
-  font-family: 'Poppins', sans-serif; 
-  font-size: 24px; 
-  color: #333; 
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  padding: 0 1rem;
 }
 
 /* Estilo para el reloj */
 .clock {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: #333;
   margin-left: 20px;
@@ -74,12 +78,13 @@ header h1 {
   flex-wrap: wrap;
 }
 
-.noticias, .negocios, .deportes{
+.noticias,
+.negocios,
+.deportes {
   text-align: left;
-  border-collapse: collapse;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
 }
 
 .card {
@@ -89,41 +94,50 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
   overflow: hidden;
   padding: 1rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  flex-basis: 29%;
+  flex-basis: 45%;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .card:hover {
   background-color: black;
-  color: white;
+  color: white !important;
 }
 
 .card p:hover {
   color: white;
 }
-/* Estilos para el formulario*/
 
-#add-article {
-  margin: 20px;;
+/* Estilos para los contadores de artículos */
+
+section p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #333;
 }
 
-#article-form {
-  display:flex;
-  flex-direction: column;
+/* Estilos para el formulario para agregar noticias */
 
+#article-form {
+  display: flex;
+  flex-direction: column;
 }
 
 #article-form label {
   margin-top: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
-#article-form imput, #article-form textarea, #article-form select {
+#article-form imput,
+#article-form textarea,
+#article-form select {
   margin-top: 5px;
   padding: 8px;
+  font-family: "Poppins", sans-serif;
 }
 
 #article-form button {
@@ -139,16 +153,53 @@ header h1 {
   background-color: black;
 }
 
+/* Formulario de Contacto */
+
+#contact-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #31231e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: black;
+  color: white;
+}
+
 /* Footer */
 
 footer {
   background-color: #c9d2d0;
 }
 
-footer,
-p {
-  color: #31231e;
-}
 
 /* Media Queries */
 
@@ -170,17 +221,20 @@ p {
     font-size: 14px;
   }
 
-  .noticias {
+  .noticias,
+  .deportes,
+  .negocios {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .card {
-    flex-basis: 100%;
-    margin-bottom: 12px;
+    width: 100%;
   }
 
-  video, audio {
+  video,
+  audio {
     width: 100%;
   }
 }
@@ -190,7 +244,7 @@ p {
   .main-container {
     width: 90%;
     margin: 120px auto;
-    padding: 20px 0;
+    padding: 20px;
   }
 
   .navegacion {
@@ -203,16 +257,16 @@ p {
     font-size: 16px;
   }
 
-  .noticias {
+  .noticias,
+  .negocios,
+  .deportes {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
-  .card {
-    flex-basis: 45%;
-  }
-
-  video, audio {
+  video,
+  audio {
     width: 100%;
   }
 }
@@ -235,16 +289,28 @@ p {
     font-size: 18px;
   }
 
-  .noticias {
+  .noticias,
+  .negocios,
+  .deportes {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .card {
-    flex-basis: 29%;
+    flex-basis: 40%;
+    gap: 1rem;
   }
 
-  video, audio {
+  video,
+  audio {
     width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    flex-basis: 29%;
+    gap: 1rem;
   }
 }

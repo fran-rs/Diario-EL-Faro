@@ -29,10 +29,11 @@
     </nav>
     <!--Contenido Principal-->
     <main class="main-container">
-      <!--Sección Contenido Noticioso-->
+      <!--Sección Contador de Noticias-->
       <section>
         <h2>Noticias</h2>
-
+        <!-- Contador de noticias -->
+        <p id="noticias-count">Artículos: 0</p>
         <div class="noticias">
           <div class="card">
             <h3>Crisis en Salud Pública.</h3>
@@ -66,7 +67,7 @@
             </p>
           </div>
         </div>
-        <!--Sección Audio y VIdeo -->
+        <!-- Sección Audio y VIdeo -->
         <div>
           <video controls>
             <source src="" />
@@ -80,9 +81,12 @@
           </audio>
         </div>
 
-        <!--Sección Deportes-->
+        <!-- Sección Deportes -->
 
         <h2>Deportes</h2>
+        <!-- Sección Contador de Deportes -->
+        <p id="deportes-count">Artículos: 0</p>
+
         <div class="deportes">
           <div class="card">
             <h3>Selección Chilena en las Eliminatorias.</h3>
@@ -117,8 +121,12 @@
             </p>
           </div>
         </div>
-        <!--Sección Negocios-->
+        <!-- Sección Negocios -->
         <h2>Negocios</h2>
+
+        <!-- Sección Contador de Negocios -->
+        <p id="negocios-count">Artículos: 0</p>
+
         <div class="negocios">
           <div class="card">
             <h3>Suspensión En Huachipato.</h3>
@@ -157,7 +165,7 @@
         <h2>Añadir Nuevo Artículo</h2>
         <form id="article-form">
           <label for="article-title">Título</label>
-          <imput type="text" id="article-title" name="title" required />
+          <input type="text" id="article-title" name="title" required />
 
           <label for="article-content">Contenido</label>
           <textarea id="article-content" name="content" rows="4" required></textarea>
@@ -173,12 +181,31 @@
         </form>
       </section>
 
+    <!-- Formulario de contacto -->
+ 
+    <section id="contact-form">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <label for="contact-name">Nombre</label>
+        <input type="text" id="contact-name" name="name" required />
+
+        <label for="contact-message">Mensaje</label>
+        <textarea name="message" id="contact-message" rows="4" required ></textarea>
+
+        <button type="submit">Enviar</button>
+
+      </form>
+      
+    </section>
+
     </main>
     <!-- Pie de Página -->
     <footer>
+      <!-- Total de artículos-->
+      <p id="total-articles">Total de artículos: 0</p>
       <p>© 2024 El Faro. Todos los derechos reservados.</p>
     </footer>
-    <!-- Enlazar el archivo JavaScript -->
+    <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
