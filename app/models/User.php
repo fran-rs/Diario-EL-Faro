@@ -7,7 +7,7 @@ class User {
     public function __construct($name, $email, $password) {
         $this->name = $name;
         $this->email = $email;
-        $this->password = $password; 
+        $this->password = password_hash($password, PASSWORD_DEFAULT); // Seguridad al almacenar contraseñas
     }
 
     public function getDetails() {
