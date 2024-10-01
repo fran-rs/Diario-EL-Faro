@@ -1,4 +1,7 @@
-Diario El Faro
-Contiene 3 noticias de actualidad de Chile creado en tablas
-Contiene un video 
-Contiene un audio
+# El Faro
+
+Como correr el proyecto
+Ir a el-faro/public
+```bash
+php -S localhost:8000
+```
